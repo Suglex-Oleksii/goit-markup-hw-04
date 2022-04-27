@@ -52,12 +52,50 @@
   color: var(--text-color);
   text-decoration: none;
 }
-.contacts .link:hover,
-.contacts .link:focus {
+
+
+
+.paragraph-contacts > .link:hover,
+.paragraph-contacts > .link:focus {
   color: var(--active-button-color);
 }
 
+
+.icon-mail {
+  display: inline-block;
+  content: " ";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/icons.svg/contacts/envelope.svg);
+  background-size: auto;
+}
+
+.icon-tel {
+  display: inline-block;
+  content: " ";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/icons.svg/contacts/smartphone.svg);
+  background-size: auto;
+}
+
+
+
+
+
+
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+  to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/hero/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--background-footer-color);
 }
 .title-hero {
@@ -100,7 +138,56 @@
   font-size: 14px;
   line-height: 1.7;
   color: var(--text-color);
+  letter-spacing: 0.03em;
 }
+
+
+
+
+.paragraph-advantages::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  border-radius: 4px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+  }
+
+.icon-antenna::before {
+  background-image: url(../images/icons.svg/advantages/antenna.svg);
+  }
+.icon-clock::before {
+  background-image: url(../images/icons.svg/advantages/clock.svg);
+  }
+.icon-diagram::before {
+  background-image: url(../images/icons.svg/advantages/diagram.svg);
+ }
+.icon-astronaut::before {
+  background-image: url(../images/icons.svg/advantages/astronaut.svg);
+ }
+
+
+.paragraph-team::after {
+  display: block;
+  content: " ";
+  height: 44px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-header-color);
+  margin-bottom: 30px;
+}
+.icon-messengers::before {
+  background-image: url(instagram), url(twitter), url(facebook), url(linkedin);
+}
+
+
+
+
+
 .box-team-list {
   text-decoration: none;
 }
@@ -108,6 +195,8 @@
 .team-section {
   background-color: var(--background-second-color);
 }
+
+
 .title-team-list {
   font-weight: 500;
   font-size: 16px;
@@ -153,6 +242,7 @@
 .footer {
   background-color: var(--background-footer-color);
 }
+
 .footer .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -180,6 +270,13 @@
 .address .link:hover,
 .address .link:focus {
   color: var(--background-header-color);
+}
+
+.title-messengers {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  color: var(--background-header-color)
 }
 
 ul,
@@ -229,7 +326,8 @@ img {
 }
 .paragraph-navigator > .link,
 .paragraph-contacts > .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -273,7 +371,8 @@ img {
 }
 .list-advantages,
 .list-presentation,
-.list-team {
+.list-team,
+.list-customers {
   display: flex;
 }
 .title-large {
@@ -295,7 +394,7 @@ img {
 .box-team-list {
   display: block;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   margin: 0 auto;
   text-align: center;
 }
@@ -337,13 +436,81 @@ img {
   margin-bottom: -30px;
 }
 
+.paragraph-customers:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.footer-container {
+  display: flex;
+}
+
+
+
 .address {
   margin-top: 20px;
 }
 .paragraph-address:not(:last-child) {
   margin-bottom: 9px;
+}
+
+
+.footer-address {
+  width: 235px;
+}
+
+.footer-messengers {
+  margin-left: 70px;
+  margin-top: 12px;
+  width: 206px;
+}
+
+
+.list-messengers {
+  display: flex;
+  margin-top: 20px;
+}
+
+.paragraph-messengers > .icon {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  content: " ";
+}
+.paragraph-messengers:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-instagram {  
+  background-image: url(../images/icons.svg/messengers/instagram.svg)
+}
+
+.icon-twitter {  
+  background-image: url(../images/icons.svg/messengers/twitter.svg)
+}
+
+.icon-facebook {  
+  background-image: url(../images/icons.svg/messengers/facebook.svg)
+}
+
+.icon-linkedin {  
+  background-image: url(../images/icons.svg/messengers/linkedin.svg)
 }
