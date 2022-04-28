@@ -53,38 +53,35 @@
   text-decoration: none;
 }
 
-
-
 .paragraph-contacts > .link:hover,
 .paragraph-contacts > .link:focus {
   color: var(--active-button-color);
 }
 
-
 .icon-mail {
-  display: inline-block;
-  content: " ";
+  box-sizing: content-box;
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/icons.svg/contacts/envelope.svg);
-  background-size: auto;
+  padding-right: 10px;
+  fill: #757575;
+  cursor: pointer;
 }
 
 .icon-tel {
-  display: inline-block;
-  content: " ";
+  box-sizing: content-box;
   width: 10px;
   height: 16px;
-  margin-right: 10px;
-  background-image: url(../images/icons.svg/contacts/smartphone.svg);
-  background-size: auto;
+  padding-right: 10px;
+  fill: #757575;
+  cursor: pointer;
 }
 
-
-
-
-
+.icon-mail:hover,
+.icon-tel:hover,
+.icon-mail:focus,
+.icon-tel:focus {
+  fill: #2196f3;
+}
 
 .hero {
   max-width: 1600px;
@@ -92,7 +89,11 @@
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
-  to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/hero/hero.jpg");
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/studio/hero/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -141,9 +142,6 @@
   letter-spacing: 0.03em;
 }
 
-
-
-
 .paragraph-advantages::before {
   display: block;
   content: " ";
@@ -152,41 +150,71 @@
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   margin-bottom: 30px;
-  }
+}
 
 .icon-antenna::before {
   background-image: url(../images/icons.svg/advantages/antenna.svg);
-  }
+}
 .icon-clock::before {
   background-image: url(../images/icons.svg/advantages/clock.svg);
-  }
+}
 .icon-diagram::before {
   background-image: url(../images/icons.svg/advantages/diagram.svg);
- }
+}
 .icon-astronaut::before {
   background-image: url(../images/icons.svg/advantages/astronaut.svg);
- }
+}
 
+.paragraph-team {
+  width: 270px;
+  height: 428px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
 
-.paragraph-team::after {
-  display: block;
-  content: " ";
+.list-team-messengers {
+  display: flex;
+  margin: 16px 32px 30px 32px;
+}
+
+.paragraph-team-messengers {
+  width: 44px;
   height: 44px;
-  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--background-header-color);
-  margin-bottom: 30px;
+  display: block;
+  content: " ";
 }
-.icon-messengers::before {
-  background-image: url(instagram), url(twitter), url(facebook), url(linkedin);
+.paragraph-team-messengers:not(:last-child) {
+  margin-right: 10px;
 }
 
+.paragraph-team-messengers:hover,
+.paragraph-team-messengers:focus {
+  background-color: #2196f3;
+}
 
+.icon-team {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  cursor: pointer;
+  padding: 12px;
+}
 
-
+.icon-team:hover,
+.icon-team:focus {
+  fill: #ffffff;
+}
 
 .box-team-list {
   text-decoration: none;
@@ -195,7 +223,6 @@
 .team-section {
   background-color: var(--background-second-color);
 }
-
 
 .title-team-list {
   font-weight: 500;
@@ -223,10 +250,22 @@
 .button-portfolio:focus {
   background-color: var(--active-button-color);
   color: var(--background-header-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .card-portfolio {
   text-decoration: none;
 }
+
+.paragraph-card-portfolio:hover,
+.paragraph-card-portfolio:focus {
+  width: 370px;
+  height: 404px;
+  border-color: 1px solid #eeeeee;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .title-portfolio-list {
   font-weight: 700;
   font-size: 18px;
@@ -276,7 +315,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
-  color: var(--background-header-color)
+  color: var(--background-header-color);
 }
 
 ul,
@@ -440,14 +479,31 @@ img {
   margin-right: 30px;
 }
 
-.client {
+.paragraph-customers {
   width: 170px;
   height: 92px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  cursor: pointer;
+}
+.paragraph-customers:hover,
+.paragraph-customers:focus {
+  border-color: #2196f3;
 }
 
-
+.client {
+  box-sizing: content-box;
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  cursor: pointer;
+  padding: 16px 32px;
+}
+.client:hover,
+.client:focus {
+  fill: #2196f3;
+}
 
 .footer {
   padding-top: 60px;
@@ -458,15 +514,12 @@ img {
   display: flex;
 }
 
-
-
 .address {
   margin-top: 20px;
 }
 .paragraph-address:not(:last-child) {
   margin-bottom: 9px;
 }
-
 
 .footer-address {
   width: 235px;
@@ -478,13 +531,12 @@ img {
   width: 206px;
 }
 
-
 .list-messengers {
   display: flex;
   margin-top: 20px;
 }
 
-.paragraph-messengers > .icon {
+.paragraph-messengers {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -499,18 +551,15 @@ img {
   margin-right: 10px;
 }
 
-.icon-instagram {  
-  background-image: url(../images/icons.svg/messengers/instagram.svg)
+.paragraph-messengers:hover,
+.paragraph-messengers:focus {
+  background-color: #2196f3;
 }
-
-.icon-twitter {  
-  background-image: url(../images/icons.svg/messengers/twitter.svg)
-}
-
-.icon-facebook {  
-  background-image: url(../images/icons.svg/messengers/facebook.svg)
-}
-
-.icon-linkedin {  
-  background-image: url(../images/icons.svg/messengers/linkedin.svg)
+.icon {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  cursor: pointer;
+  padding: 12px;
 }
