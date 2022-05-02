@@ -347,7 +347,6 @@ img {
   height: 100%;
   fill: #afb1b8;
   cursor: pointer;
-  padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -445,6 +444,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer .logo {
   font-family: "Raleway", sans-serif;
